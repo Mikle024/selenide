@@ -50,8 +50,8 @@ public class CardApplicationPositiveTest {
         }
         String useDate = generateDate(7, "d");
         $$(".calendar__day").findBy(Condition.text(useDate)).click();
-        $("[data-test-id='name'] input").setValue("Александр");
-        $("[data-test-id='phone'] input").setValue("+79999999999");
+        $("[data-test-id='name'] input").setValue("Михаил");
+        $("[data-test-id='phone'] input").setValue("+77777777777");
         $("[data-test-id='agreement']").click();
         $(".button__content").click();
         String planningDate = generateDate(7, "dd.MM.yyyy");
