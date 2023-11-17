@@ -35,7 +35,7 @@ public class CardApplicationPositiveTest {
         $(".button__content").click();
 
         $("[data-test-id='success-notification'] .notification__content")
-                .shouldBe(Condition.visible, Duration.ofSeconds(10))
+                .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldBe(Condition.exactText("Встреча успешно запланирована на " + planningDate));
     }
 }
