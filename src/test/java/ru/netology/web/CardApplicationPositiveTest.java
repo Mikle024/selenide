@@ -24,6 +24,7 @@ public class CardApplicationPositiveTest {
     @Test
     public void successfulApplicationTest() {
         open("http://localhost:9999");
+
         $("[data-test-id='city'] input").setValue("Москва");
         String planningDate = generateDate(4, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
@@ -32,6 +33,7 @@ public class CardApplicationPositiveTest {
         $("[data-test-id='phone'] input").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $(".button__content").click();
+
         $("[data-test-id='success-notification'] .notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(10))
                 .shouldBe(Condition.exactText("Встреча успешно запланирована на " + planningDate));
